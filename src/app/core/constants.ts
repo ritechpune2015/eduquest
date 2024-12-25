@@ -1,0 +1,1 @@
+export var apibaseurl="https://localhost:7214/api/";

@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+      <h4 class="card-title">Country List</h4>
+      <a asp-action="Create" class="btn btn-warning"><i class="bx bx-add-to-queue"></i> Create New </a>
+      <hr />
+      
+      <table class="table table-bordered table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dttrigger">
+        <thead>
+            <tr>
+                <th style="width:10%;"> Sr. No. </th>
+                <th> Country Name </th>
+                <th> Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of countries; track item.CountryID;let ind=$index) {
+                <tr>
+                    <td>{{ind+1}}</td>
+                    <td>{{item.CountryName}}</td>
+                    <td>
+      
+                    </td>
+                </tr>
+            }
+        </tbody>
+      </table>
+  </div>
+</div>
